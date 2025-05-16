@@ -5,80 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Acesso Fácil</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
+
 <body>
-
     <header>
-        <div class="menu-home" style="display: none;">
-            <img src="src/img/logo-trilhas-inova.png" alt="Logo Trilhas Inova" id="img-logo-trilhas">
-            <p class="texto-cabecalho">Portal Acesso Fácil - Conectando Cidadãos aos Serviços do Maranhão</p>
-            <nav>
-                <a href="#">Acesso à Informação</a>
-                <a href="#">Primeiro Acesso</a>
-                <a href="#">Informação Classificada</a>
-            </nav>
-        </div>
+        <nav class="menu-navegacao">
+            <div class="menu_titulo">
+                <img src="./src/img/logo/logo-trilhas-inova-250px.png" alt="Logo Trilhas Inova" id="img-logo-trilhas">
+                <p class="texto-cabecalho">Portal Acesso Fácil - Conectando Cidadãos aos Serviços do Maranhão</p>
+            </div>
 
-        <div class="menu-saude" style="display: none;">
-            <img src="src/img/logo-trilhas-inova.png" alt="Logo Trilhas Inova" id="img-logo-trilhas">
-            <p class="texto-cabecalho">Portal Acesso Fácil - Conectando Cidadãos aos Serviços do Maranhão</p>
-            <div class="titulo-pagina"><p>SAÚDE</p></div>
-            <nav>
-                <a href="#">Institucional</a>
-                <a href="#">Cidadão</a>
-                <a href="#">Gestores</a>
-                <a href="#">Transparência</a>
-            </nav>
-        </div>
+            <div id="menu_links_background">
+                <div class="menu_links">
+                    <a href="#" class="menu_link_inicio">Inicio</a>
+                    <a href="#" class="menu_link_saude">Saúde</a>
+                    <a href="#" class="menu_link_educacao">Educação</a>
+                    <a href="#" class="menu_link_cultura">Cultura</a>
+                    <a href="#" class="menu_link_servico_social">Serviços Socias</a>
+                </div>
 
-        <div class="menu-educacao">
-            <img src="src/img/logo-trilhas-inova.png" alt="Logo Trilhas Inova" id="img-logo-trilhas">
-            <p class="texto-cabecalho">Portal Acesso Fácil - Conectando Cidadãos aos Serviços do Maranhão</p>
-            <div class="titulo-pagina"><p>EDUCAÇÃO</p></div>
-            <nav>
-                <a href="#">Início</a>
-                <a href="#">Secretaria</a>
-                <a href="#">Plano de Educação</a>
-                <a href="#">Serviços</a>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <div class="home" style="display: none;">
-            <div class="breadcrumbs">
-                <p>Página Inicial</p>
+        <section class="secao_home" >
+            <h1 class="titulo_pagina">Página Inicial</h1>
+            <div class="texto-informativo">
+                <p class="text-intro">Breve Resumo sobre o que é a pagina, quais serviços temos disponíveis</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur saepe non neque. Ducimus repellat ipsam enim, fuga sapiente id dolor alias voluptatibus nihil, repellendus qui natus illo ex perspiciatis. Doloremque?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsa necessitatibus, velit ducimus eveniet reprehenderit labore magni corporis ipsum nobis aspernatur dolore ad iusto explicabo pariatur doloribus voluptate possimus repudiandae.
+                </p>
             </div>
-                <a href="#" class="primeiro-acesso">Primeiro Acesso</a>
-                <p class="text-intro">Passo a passo de como fazer o seu primeiro pedido de informação</p>
-                <div class="links-servicos">
-                    <a href="#">Saúde</a>
-                    <a href="#">Educação</a>
-                    <a href="#">Detran</a>
-                    <a href="#">Serviços de Urgência</a>
-                    <a href="#">Direito dos cidadãos</a>
+
+            <div class="servicos">
+                <h2>Serviços</h2>
+                <div class="btn_servicos">
+                    <button id="btn_saude">Saúde</button>
+                    <button id="btn_educacao">Educação</button>
+                    <button id="btn_cultura">Cultura</button>
+                    <button id="btn_servicos_sociais">Serviços Sociais</button>
                 </div>
-        </div>
+            </div>
 
-        <div class="cadastro" style="display: none;">
-            <p>Primeiro Acesso</p>
-            <h1>CADASTRO</h1>
-            <form class="formulario-cadastro" onsubmit="event.preventDefault()">
-                <p>Nome Completo</p>
-                <input type="text">
-                <p>Data de Nascimento</p>
-                <input type="date">
-                <p>CPF</p>
-                <input type="number">
-                <p>Cartão do SUS</p>
-                <input type="number">
-                <p>Condições Médicas</p>
-                <textarea class="input-grande"></textarea>
-                <input type="submit">
-            </form>
-        </div>
+        </section>
 
-        <div class="saude" style="display: none;">
+        <section class="secao_saude" style="display: none;">
             <div class="imagens-saude">
                 <img src="src/img/saude/img1.png" alt="Programa Cuidar de Todos">
                 <img src="src/img/saude/img2.png" alt="Consulta com Paciente">
@@ -103,9 +76,9 @@
                     </div>
                   </a>
             </div>
-        </div>
+        </section>
 
-        <div class="educacao">
+        <section class="secao_educacao" style="display: none;">
             <div class="imagens-saude">
                 <img src="src/img/educacao/img1.png" alt="Programa Cuidar de Todos">
                 <img src="src/img/educacao/img2.png" alt="Consulta com Paciente">
@@ -130,7 +103,7 @@
                     </div>
                   </a>
             </div>
-        </div>
+        </section>
 
     </main>
 
