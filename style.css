@@ -14,8 +14,6 @@ p, h1 {
     color: black;
 }
 
-
-
 /*ÁREA DOS CABEÇALHOS*/
 header{
     display: flex;
@@ -32,7 +30,6 @@ header{
     justify-content: center;
     padding: 2%;
     gap: 30px;
-    
     
     #img-logo-trilhas{
         height: 31px;
@@ -74,36 +71,13 @@ header{
         background-color: white;
         font-size: 1.6rem;
         transition: 0.5s;
-
     }
-    
 }
-
-#btn_mobile{
-    display: none;
-}
-
-.menu-saude {
-    background-color: #E53935;
-}
-
-.menu-saude nav {
-    background-color: #EF5350;
-}
-
-.menu-educacao {
-    background-color: #fbd56c;
-}
-
-.menu-educacao nav {
-    background-color: #FEEBC1;
-}
-
-/**/
 
 main {
     display: flex;
     flex-direction: column;
+    gap: 50px;
 
     margin: 0 auto;
     max-width: 1000px;
@@ -115,7 +89,7 @@ main {
 }
 
 
-.secao_home {
+.secao_informativo {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -126,7 +100,6 @@ main {
     font-size: 2rem;
 }
 
-
 .text-intro {
     color: rgba(0, 0, 0, 0.93);
     font-size: 1.4rem; 
@@ -136,136 +109,124 @@ main {
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    padding-top: 1%;
+    padding-top: 1%;   
+}
+
+.btn{
+    cursor: pointer;
+    background-color: rgba(33, 51, 166, 1);
+    border-radius: 8px;
+    border: none;
+
+    width: 100%;
+    height: 50px;
+
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.btn:hover{
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+.btn:focus{
+    font-size: 1.5rem;
     
-    button{
-        cursor: pointer;
-        background-color: rgba(33, 51, 166, 1);
-        border-radius: 8px;
-        border: none;
+}
 
+.btn.ativo {
+    box-shadow: 0px 0px 4px 2px red;
+    font-size: 1.5em;
+}
+
+.box_servico{
+    padding: 2% 1.5%;
+    max-width: 970px;
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sub_servicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card_input-servico{
+    cursor: pointer;
+    display: flex;
+    padding-left: 3px;
+    align-items: center;
+    
+    width: 15%;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 12px;
+    background-color: #e53935;
+
+    .div_txt{
         width: 100%;
-        height: 50px;
-
-        font-size: 1.2rem;
-        text-decoration: none;
+    }
+        
+    p{
         text-align: center;
         color: white;
+        margin: 0 auto;
     }
+}
 
-    button:hover{
-        font-size: 1.5rem;
-        transition: 0.5s;
+.card_input-servico:hover{
+    transform: scale(1.08);
+    transition: 0.4s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.div_filtros{
+    display: flex;
+    gap: 50px;
+}
+
+#filtro_local, #filtro_horario{
+    select{
+        width: 100px;
+        height: 30px;
+        font-size: 1rem;
+        border-radius: 8px;
     }
-    
 }
 
-/*SAÚDE*/
-.imagens-saude {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-}
-
-.imagens-saude img{
-    height: 300px;
-    aspect-ratio: 4/3;
-}
-
-.link-bloco {
-    text-decoration: none;
-    display: inline-block;
-}
-  
-.bloco-cidadao {
-    background-color: #00DDEB;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-    color: #2E00A0;
-    transition: transform 0.2s;
-    height: 100%;
-}
-
-.bloco-cidadao:hover {
-    transform: scale(1.05);
+#btn_buscar{
+    margin-top: 12px;
     cursor: pointer;
-}
-
-.icon {
-    font-size: 40px;
-    display: block;
-    margin-bottom: 10px;
-    color: black;
-}
-
-.bloco-cidadao h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.bloco-cidadao p {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
-    letter-spacing: 1.5px;
-    line-height: 1.4;
-}
-
-.bloco-profissionais {
-    background-color: #86C8DC;
-    padding: 20px;
+    width: 10%;
+    height: 35px;
     border-radius: 8px;
-    width: 280px;
-    text-align: center;
-    color: #0B0B49; 
-    transition: transform 0.2s;
-    height: 100%;
+    border: 1px solid #e53935;
 }
 
-.bloco-profissionais:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+#btn_buscar:hover{
+    background-color: #e53935;
+    border-color: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.4s;
 }
 
-.bloco-profissionais .icon {
-    font-size: 40px;
-    display: block;
-    margin-bottom: 10px;
-    color: black;
+.box_servico{
+    display: none;
 }
-
-.bloco-profissionais h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.bloco-profissionais p {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
-    letter-spacing: 1.5px;
-    line-height: 1.4;
-}
-
-.blocos-saude {
-    align-items: stretch;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-
 
 /*Mobile*/
 @media (max-width: 900px) {
+    main{
+        margin-bottom: 20%;
+    }
+
     .menu_titulo{
         .texto-cabecalho{
             font-size: 1.5rem;
@@ -274,9 +235,96 @@ main {
     .menu_links{
         a{
             font-size: 1.3rem;
-
         }
-        
+    }
+
+    .card_input-servico{
+        width: 15%;
+    }
+}
+
+@media (max-width: 700px) {
+    main{
+        padding-bottom: 0;
+    }
+
+    .menu_titulo{
+        .texto-cabecalho{
+            font-size: 1.1rem;
+        }
+    }
+
+    .menu-navegacao{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu_titulo{
+        flex-direction: column;
+
+        #img-logo-trilhas{
+            width: 250px;
+        }
+        .texto-cabecalho{
+            max-width: 700px;
+        }
+    }
+
+    #menu_links_background{
+        display: none;
+    }
+
+    /*MAIN*/
+    .titulo_pagina{
+        font-size: 1.3rem;
+    }
+    .text-intro {
+        font-size: 1rem; 
+    }
+
+    .servicos h2{
+        font-size: 1.2rem;
+    }
+
+    .btn_servicos{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding-top: 3%;
+
+        button{
+            width: 80%;
+        }
+    }
+
+    .box_servico{
+        padding: 4% 1.5%;
+
+    }
+
+    .sub_servicos{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .card_input-servico{
+        width: 40%;
+
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    .div_filtros{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #btn_buscar{
+        width: 28%;
+        height: 40px;
     }
     
 }
